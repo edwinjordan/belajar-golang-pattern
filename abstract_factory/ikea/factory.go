@@ -1,17 +1,22 @@
 package ikea
 
+import (
+	abstract_factory "github.com/imrenagi/design-pattern/abstract_factory"
+	product "github.com/imrenagi/design-pattern/abstract_factory/ikea/product"
+)
+
 //factory
 type Ikea struct {
 }
 
-func (l *Leifarne) CreateChair() Chair {
-	return &Leifarne{}
+func (l *Ikea) CreateChair() abstract_factory.Chair {
+	return &product.Leifarne{}
 }
 
-func (l *Leifarne) CreateCoffetable() CoffeTable {
-	return &Vittsjo{}
+func (l *Ikea) CreateCoffetable() abstract_factory.CoffeeTable {
+	return &product.VITTSJÖ{}
 }
 
-func (l *Leifarne) CreateSofa() Sofa {
-	return &Hemlingby{}
+func (l *Ikea) CreateSofa() abstract_factory.Sofa {
+	return &product.HEMLINGBY{}
 }

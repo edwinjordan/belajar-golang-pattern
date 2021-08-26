@@ -14,7 +14,7 @@ type Dimension struct {
 	Length, Width, Weight int
 }
 
-type CoffeTable interface {
+type CoffeeTable interface {
 	Pricey
 	Size() Dimension
 	IsFodable() bool
@@ -34,6 +34,6 @@ type Sofa interface {
 
 type FurnitureFactory interface {
 	CreateChair() Chair
-	CreateCoffetable() CoffeTable
+	CreateCoffetable() CoffeeTable
 	CreateSofa() Sofa
 }
